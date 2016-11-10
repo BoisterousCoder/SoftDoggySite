@@ -3,17 +3,18 @@
     <head>
         <title>Soft Doggy</title>
         <link href="CSS/MenuBar.css" rel="stylesheet" type="text/css">
+        <link href="CSS/Base.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="JS/JQuery.js"></script>
-        <script type="text/javascript" src="JS/MenuButton.js"></script>
+        <script type="text/javascript" src="JS/MenuBar.js"></script>
     </head>
     <body>
         <div id="menuButtonDiv">
 			<div id="horizMenuList" class="menuList">
 				<ul>
-					<li id='logo' class='menuItem'>Home</li>
-					<li class='menuItem'>About</li>
-					<li class='menuItem'>Finished Projects</li>
-					<li class='menuItem'>WIP Projects</li>
+					<li id='logo' goto='/index.html' class='menuItem'>Home</li>
+					<li class='menuItem' goto='/about.html'>About</li>
+					<li class='menuItem' goto='/finished.html'>Finished Projects</li>
+					<li class='menuItem' goto='/wips.html'>WIP Projects</li>
 				</ul>
 			</div>
 			<button id="menuButton">
@@ -25,9 +26,9 @@
 		</div>
 		<div id="vertMenuList" class="menuList">
 			<ul>
-                <li class='menuItem'>About</li>
-                <li class='menuItem'>Finished Projects</li>
-                <li class='menuItem'>WIP Projects</li>
+                <li class='menuItem' goto='/about.html'>About</li>
+                <li class='menuItem' goto='/finished.html'>Finished Projects</li>
+                <li class='menuItem' goto='/wips.html'>WIP Projects</li>
 			</ul>
 		</div>
     </body>
