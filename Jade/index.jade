@@ -1,6 +1,8 @@
 mixin css(src)
+    -src = 'CSS/' + src
     link(href=src, rel="stylesheet", type="text/css")
 mixin script(src)
+    -src = 'JS/' + src
     script(type="text/javascript", src=src)
     
 html
@@ -9,14 +11,13 @@ html
             |SoftDoggy Games
             block title
                 | Home
-        +css('CSS/MenuBar.css')
-        +css('CSS/Base.css')
-        block css
-            +css('CSS/Home.css')
-        +script('JS/JQuery.js')
-        +script('JS/MenuBar.js')
-        block scripts
-            +script('JS/Home.js');
+        +css('MenuBar.css')
+        +css('Base.css')
+        +script('JQuery.js')
+        +script('MenuBar.js')
+        block head
+            +script('Home.js')
+            +css('Home.css')
     body
         #menuButtonDiv
             #horizMenuList.menuList
@@ -40,3 +41,4 @@ html
                     | Home
         main
             block content
+                | Nothing Yet
