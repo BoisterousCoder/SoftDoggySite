@@ -5,8 +5,10 @@ mixin script(src)
     
 html
     head
-        block title
-            title Soft Doggy Home
+        title
+            |SoftDoggy Games
+            block title
+                | Home
         +css('CSS/MenuBar.css')
         +css('CSS/Base.css')
         block css
@@ -31,4 +33,10 @@ html
                     li.MenuItem(goto='/about.html') About
                     li.MenuItem(goto='/finished.html') Finished Projects
                     li.MenuItem(goto='/wips.html') WIP Projects
-                    
+        header
+            h1 SoftDoggy Games
+            h2
+                block title
+                    | Home
+        main
+            block content
