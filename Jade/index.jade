@@ -1,0 +1,34 @@
+mixin css(src)
+    link(href=src, rel="stylesheet", type="text/css")
+mixin script(src)
+    script(type="text/javascript", src=src)
+    
+html
+    head
+        block title
+            title Soft Doggy Home
+        +css('CSS/MenuBar.css')
+        +css('CSS/Base.css')
+        block css
+            +css('CSS/Home.css')
+        +script('JS/JQuery.js')
+        +script('JS/MenuBar.js')
+        block scripts
+            +script('JS/Home.js');
+    body
+        #menuButtonDiv
+            #horizMenuList.menuList
+                ul
+                    li#logo.MenuItem(goto='/index.html') Home
+                    li.MenuItem(goto='/about.html') About
+                    li.MenuItem(goto='/finished.html') Finished Projects
+                    li.MenuItem(goto='/wips.html') WIP Projects
+                button#menuButton
+                    #topBar.menuButton
+                    #bottomnBar.menuButton
+            #vertMenuList.menuList
+                ul
+                    li.MenuItem(goto='/about.html') About
+                    li.MenuItem(goto='/finished.html') Finished Projects
+                    li.MenuItem(goto='/wips.html') WIP Projects
+                    
