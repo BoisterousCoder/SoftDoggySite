@@ -12,7 +12,9 @@ $(function () {
 		}
 	});
 	$('.menuItem').click(function(){
-		 window.location.href += 'notFound.html'
+        var pathParts = window.location.pathname.split('/');
+        pathParts[pathParts.length-1] = $(this).attr('goto');
+        window.location.pathname = pathParts.join('/');
 	});
 	refreshSize();
 	$(window).resize(refreshSize);

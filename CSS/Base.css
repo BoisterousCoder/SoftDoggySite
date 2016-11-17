@@ -1,15 +1,23 @@
 body{
-  background-color: #9d4ce4;
-}
-main, header{
+    background-color: #9d4ce4;
 }
 header{
-  padding-bottom: 1em;
-  padding-left: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    background-color: #333;
+    border: #9d4ce4 7px solid;
+    color: #fff;
 }
 main{
-  padding-left: 2em;
+    padding-left: 1em;
+}
+main div{
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    border: #9d4ce4 5px solid;
 }
 h1, h2, h3, h4, h5, h6{
-  margin: 0;
+    margin: 0;
 }
