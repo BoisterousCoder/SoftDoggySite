@@ -22,13 +22,14 @@ html
         #menuButtonDiv
             #horizMenuList.menuList
                 ul
-                    li#logo.MenuItem(goto='/index.html') Home
-                    li.MenuItem(goto='/about.html') About
-                    li.MenuItem(goto='/finished.html') Finished Projects
-                    li.MenuItem(goto='/wips.html') WIP Projects
+                    li#logo.menuItem(goto='/index.html') Home
+                    li.menuItem(goto='/about.html') About
+                    li.menuItem(goto='/finished.html') Finished Projects
+                    li.menuItem(goto='/wips.html') WIP Projects
                 button#menuButton
-                    #topBar.menuButton
-                    #bottomnBar.menuButton
+                    div
+                        span#topBar.menuButton
+                        span#bottomnBar.menuButton
             #vertMenuList.menuList
                 ul
                     li.MenuItem(goto='/about.html') About
