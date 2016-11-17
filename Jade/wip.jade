@@ -1,11 +1,11 @@
-extends index.jade
+extends ./index.jade
 
 block title
     | WIP Project
 
 block head
-    +css('Projects.css');
-    +scripts('Projects.js');
+    include ../CSS/Projects.css
+    include ../JS/Projects.js
 
 block content
     | Nothing Yet
