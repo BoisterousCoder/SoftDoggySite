@@ -8,9 +8,13 @@ header{
     background-color: #333;
     border: #9d4ce4 7px solid;
     color: #fff;
+    max-width: 968px;
+    margin:auto;
 }
 main{
     padding-left: 1em;
+    max-width: 968px;
+    margin:auto;
 }
 main div{
     background-color: #333;
