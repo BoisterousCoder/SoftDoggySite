@@ -1,9 +1,9 @@
 mixin css(src)
-    -src = 'CSS/' + src
-    link(href=src, rel="stylesheet", type="text/css")
+	-src = 'CSS/' + src
+	link(href=src, rel="stylesheet", type="text/css")
 mixin script(src)
-    -src = 'JS/' + src
-    script(type="text/javascript", src=src)
+	-src = 'JS/' + src
+	script(type="text/javascript", src=src)
     
 html
 	head
@@ -11,11 +11,11 @@ html
 			|SoftDoggy 
 			block title
 				| Home
-			+css('MenuBar.css')
-			+css('Base.css')
-			+script('JQuery.js')
-			+script('MenuBar.js')
-			block head
+		+css('MenuBar.css')
+		+css('Base.css')
+		+script('JQuery.js')
+		+script('MenuBar.js')
+		block head
 			+script('Home.js')
 			+css('Home.css')
 	body
@@ -40,6 +40,14 @@ html
 			h3
 				block title
 					| Home
-			main
-				block content
-					| Nothing Yet
+		main
+			block content
+				| Nothing Yet
+		footer
+			| SoftDoggy&copy;2016 See About Page for more info
+			br
+			ul
+				li.menuItem(goto='index.html') Home
+				li.menuItem(goto='about.html') About
+				li.menuItem(goto='finished.html') Finished Projects
+				li.menuItem(goto='wip.html') WIP Projects
