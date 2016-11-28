@@ -75,11 +75,24 @@ function refreshSize() {
 	footer.moveTo(0, height);
 	
 	var body = $('body').perfectScrollbar();
+	
+	if(isOverflowing(footer)){
+		footer.css('display', 'none');
+	}
 }
 
 function em(input, jqueryObj) {
-    var emSize = parseFloat(jqueryObj.css("font-size"));
-    return (emSize * input);
+	var emSize = parseFloat(jqueryObj.css("font-size"));
+	return (emSize * input);
+}
+
+function isOverflowing(element){
+	if( element.offsetHeight < element.scrollHeight ||
+		element.offsetWidth < element.scrollWidth ){
+		return true;
+	}else{
+		return false;
+	}
 }
 	
 jQuery.fn.rotate = function (degrees) {
