@@ -1,5 +1,7 @@
 body{
     background-color: #9d4ce4;
+    overflow-y: auto;
+    height: 100%;
 }
 header{
     padding-bottom: 1em;
@@ -9,6 +11,7 @@ header{
     border: #9d4ce4 7px solid;
     color: #fff;
     max-width: 968px;
+    border-radius: 15px;
     margin:auto;
 }
 main{
@@ -21,13 +24,20 @@ main div{
     color: #fff;
     padding: 1em;
     border: #9d4ce4 5px solid;
+    border-radius: 15px;
 }
 h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
 footer{
+    padding-left: 1em;
+    padding-top: 0.5em;
     background-color: #333;
     color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 1em);
+    height: 3.5em;
 }
 footer li{
     display: inline-block;
@@ -41,4 +51,18 @@ footer li:last-child{
 footer ul{
     padding: 0;
     margin: 0.5em 0 0 2em;
+}
+/* For Google Chrome */
+::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+}
+
+::-webkit-scrollbar-track {
+    background: $background-color;
+}
+
+/* IE */
+body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
 }

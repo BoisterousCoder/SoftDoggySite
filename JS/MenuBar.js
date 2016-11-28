@@ -66,8 +66,22 @@ function refreshSize() {
 	showCase.css('-webkit-column-count', collumns);
 	showCase.css('-moz-column-count', collumns);
 	showCase.css('column-count', collumns);
+	
+	var footer = $('footer');
+	var main = $('main');
+	var possibleHeight1 = main.position().top + main.outerHeight(true);
+	var possibleHeight2 = window.innerHeight - em(4, footer);
+	var height = Math.max(possibleHeight1, possibleHeight2);
+	footer.moveTo(0, height);
+	
+	var body = $('body').perfectScrollbar();
 }
 
+function em(input, jqueryObj) {
+    var emSize = parseFloat(jqueryObj.css("font-size"));
+    return (emSize * input);
+}
+	
 jQuery.fn.rotate = function (degrees) {
 	$(this).css({
 		'transform': 'rotate(' + degrees + 'deg)'
