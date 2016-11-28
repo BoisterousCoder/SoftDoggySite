@@ -1,11 +1,14 @@
 extends ./index.pug
 
 block title
-    | WIP Project
+	| WIP Project
 
 block head
-    include ../CSS/Projects.css
-    include ../JS/Projects.js
+	include ../CSS/Projects.css
+	include ../JS/Projects.js
 
 block content
-    | Nothing Yet
+	#projectWrapper
+		.project(src='#', name='project technomancer')
+		.project(src='#', name='project cartmaster')
+		.project(src='#', name='project questmaster')
