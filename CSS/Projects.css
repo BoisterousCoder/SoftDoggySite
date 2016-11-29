@@ -6,8 +6,12 @@
   display: block;
   text-align: center;
   border-radius: 15px;
-  padding-bottom: 1.5em;
+  padding-bottom: 2em;
   padding-top: 0.5em;
+  margin: 1em 0;
+}
+.project:first-of-type{
+  margin-top: 0;
 }
 .project img{
   height: 1.5em;
@@ -16,18 +20,20 @@
   text-align: center;
   margin-bottom: 2em;
   display: block;
+  font-size: 1.2em;
 }
 .project button{
   background: none;
   border: #fff thin solid;
   border-radius:15px;
   color: #fff;
+  font-size: inherit;
 }
 .buttonWrapper{
   text-align: center;
   display: block;
   margin: auto;
-  width: 90%
+  width: 85%
 }
 .playButton{
   float: left;

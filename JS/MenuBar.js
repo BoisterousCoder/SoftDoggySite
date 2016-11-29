@@ -21,19 +21,12 @@ $(function () {
 		projectElement = $(projectElement);
 		var projectName = projectElement.attr('projectname');
 		
-		var downloadIcon = $('<img/>');
-		downloadIcon.attr('src', './Imgs/downloadIcon.svg')
-		
 		var header = $('<h3></h3>');
 		header.html(projectName);
 		
 		var playButton = $('<button></button>');
 		playButton.addClass('playButton');
 		playButton.html('Play');
-		
-		var downloadButton = $('<button></button>');
-		downloadButton.addClass('downloadButton');
-		downloadButton.html(downloadIcon);
 		
 		var sourceButton = $('<button></button>');
 		sourceButton.addClass('sourceButton');
@@ -42,7 +35,6 @@ $(function () {
 		var buttonWrapper = $('<div></div>');
 		buttonWrapper.addClass('buttonWrapper');
 		buttonWrapper.append(playButton);
-		buttonWrapper.append(downloadButton);
 		buttonWrapper.append(sourceButton);
 		
 		projectElement.html(header);
@@ -73,6 +65,7 @@ function refreshSize() {
 	var screenWidth = window.innerWidth;
 	var projectWrapper = $('#projectWrapper');
 	var collumns;
+	var fontSize;
 	
 	if (screenWidth < smallScreenMax) {
 		$('#menuButton').show();
@@ -88,15 +81,19 @@ function refreshSize() {
 	
 	if(screenWidth < smallScreenMax){
 		collumns = 1;
+		fontSize = 1.5;
 	}else if(screenWidth < mediumScreenMax){
 		collumns = 2;
+		fontSize = 1.5;
 	}else{
 		collumns = 4;
+		fontSize = 1;
 	}
 	
 	projectWrapper.css('-webkit-column-count', collumns);
 	projectWrapper.css('-moz-column-count', collumns);
 	projectWrapper.css('column-count', collumns);
+	projectWrapper.css('font-size', fontSize +'em');
 	
 	var footer = $('footer');
 	var main = $('main');
