@@ -1,14 +1,21 @@
 extends ./index.pug
 
+mixin css(src)
+	-src = 'CSS/' + src
+	link(href=src, rel="stylesheet", type="text/css")
+mixin script(src)
+	-src = 'JS/' + src
+	script(type="text/javascript", src=src)
+
 block title
 	| WIP Project
 
 block head
-	include ../CSS/Projects.css
-	include ../JS/Projects.js
+	+css('Projects.css')
+	+script('Projects.js')
 
 block content
 	#projectWrapper
-		.project(src='#', name='project technomancer')
-		.project(src='#', name='project cartmaster')
-		.project(src='#', name='project questmaster')
+		.project(href='#', projectName='Technomancer')
+		.project(href='#', projectName='Cartmaster')
+		.project(href='#', projectName='Questmaster')

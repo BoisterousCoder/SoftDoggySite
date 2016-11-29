@@ -1,11 +1,11 @@
 extends ./index.pug
 
 block title
-    | Finished Project
+	| Finished Project
 
 block head
-    include ../CSS/Projects.css
-    include ../JS/Projects.js
+	+css('Projects.css')
+	+script('Projects.js')
 
 block content
-    | Nothing Yet
+	| Nothing Yet

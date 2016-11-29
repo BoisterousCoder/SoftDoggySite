@@ -17,6 +17,37 @@ $(function () {
         window.location.pathname = pathParts.join('/');
 	});
 	refreshSize();
+	$('.project').each(function(i, projectElement){
+		projectElement = $(projectElement);
+		var projectName = projectElement.attr('projectname');
+		
+		var downloadIcon = $('<img/>');
+		downloadIcon.attr('src', './Imgs/downloadIcon.svg')
+		
+		var header = $('<h3></h3>');
+		header.html(projectName);
+		
+		var playButton = $('<button></button>');
+		playButton.addClass('playButton');
+		playButton.html('Play');
+		
+		var downloadButton = $('<button></button>');
+		downloadButton.addClass('downloadButton');
+		downloadButton.html(downloadIcon);
+		
+		var sourceButton = $('<button></button>');
+		sourceButton.addClass('sourceButton');
+		sourceButton.html('Source')
+		
+		var buttonWrapper = $('<div></div>');
+		buttonWrapper.addClass('buttonWrapper');
+		buttonWrapper.append(playButton);
+		buttonWrapper.append(downloadButton);
+		buttonWrapper.append(sourceButton);
+		
+		projectElement.html(header);
+		projectElement.append(buttonWrapper);
+	})
 	$(window).resize(refreshSize);
 });
 
@@ -40,7 +71,7 @@ function hideVertList() {
 
 function refreshSize() {
 	var screenWidth = window.innerWidth;
-	var showCase = $('#showcase');
+	var projectWrapper = $('#projectWrapper');
 	var collumns;
 	
 	if (screenWidth < smallScreenMax) {
@@ -63,9 +94,9 @@ function refreshSize() {
 		collumns = 4;
 	}
 	
-	showCase.css('-webkit-column-count', collumns);
-	showCase.css('-moz-column-count', collumns);
-	showCase.css('column-count', collumns);
+	projectWrapper.css('-webkit-column-count', collumns);
+	projectWrapper.css('-moz-column-count', collumns);
+	projectWrapper.css('column-count', collumns);
 	
 	var footer = $('footer');
 	var main = $('main');
