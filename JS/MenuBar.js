@@ -17,6 +17,11 @@ $(function () {
         window.location.pathname = pathParts.join('/');
 	});
 	refreshSize();
+	while($('.project').length % 4 != 0){
+		var placeHolder = $('div');
+		placeHolder.addClass('project');
+		$('#projectWrapper').append(placeHolder);
+	}
 	$('.project').each(function(i, projectElement){
 		projectElement = $(projectElement);
 		var projectName = projectElement.attr('projectname');
@@ -39,7 +44,7 @@ $(function () {
 		
 		projectElement.html(header);
 		projectElement.append(buttonWrapper);
-	})
+	});
 	$(window).resize(refreshSize);
 });
 
