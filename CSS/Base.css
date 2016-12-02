@@ -33,10 +33,14 @@ footer{
     height: 3.5em;
 }
 footer li{
+    cursor: pointer;
     display: inline-block;
     padding: 0 8px;
     margin: 0;
     border-right: 1px solid #fff;
+}
+footer li:hover{
+    color: #aaa;
 }
 footer li:last-child{
     border: none;
@@ -45,6 +49,18 @@ footer ul{
     padding: 0;
     margin: 0.5em 0 0 2em;
 }
+
+.noselect {
+    cursor: default;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
 /* For Google Chrome */
 ::-webkit-scrollbar-thumb {
     background: $foreground-color;

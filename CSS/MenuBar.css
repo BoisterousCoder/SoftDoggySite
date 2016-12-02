@@ -46,7 +46,7 @@
 	cursor: pointer;
 }
 .menuList li:hover {
-	opacity: 0.7;
+	color: #aaa;
 }
 
 #horizMenuList li{
