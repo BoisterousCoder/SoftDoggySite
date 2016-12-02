@@ -2,6 +2,8 @@ var smallScreenMax = 735;
 var mediumScreenMax = 1068;
 var isVertMenuHidden = false;
 var numberOfplaceHolders;
+var initProjects = function(){}
+var resizeProjects = function(){}
 
 $(function () {
 	$('#vertMenuList').hide();
@@ -17,34 +19,8 @@ $(function () {
         pathParts[pathParts.length-1] = $(this).attr('goto');
         window.location.pathname = pathParts.join('/');
 	});
-	numberOfplaceHolders = $('.projectBuble').length % 4;
-	for(var i = 0; i < numberOfplaceHolders; i++){
-		$('#projectWrapper').append('<div class="projectBuble placeHolderBuble" projectName="placeHolder"></div>');
-	}
-	$('.projectBuble').each(function(i, projectElement){
-		projectElement = $(projectElement);
-		var projectName = projectElement.attr('projectName');
-		
-		var header = $('<h3></h3>');
-		header.html(projectName);
-		
-		var playButton = $('<button></button>');
-		playButton.addClass('playButton');
-		playButton.html('Play');
-		
-		var sourceButton = $('<button></button>');
-		sourceButton.addClass('sourceButton');
-		sourceButton.html('Source')
-		
-		var buttonWrapper = $('<div></div>');
-		buttonWrapper.addClass('buttonWrapper');
-		buttonWrapper.append(playButton);
-		buttonWrapper.append(sourceButton);
-		
-		projectElement.html(header);
-		projectElement.append(buttonWrapper);
-		projectElement.addClass('noselect');
-	});
+	initProjects();
+	var body = $('body').perfectScrollbar();
 	
 	refreshSize();
 	$(window).resize(refreshSize);
@@ -70,9 +46,6 @@ function hideVertList() {
 
 function refreshSize() {
 	var screenWidth = window.innerWidth;
-	var projectWrapper = $('#projectWrapper');
-	var collumns;
-	var fontSize;
 	
 	if (screenWidth < smallScreenMax) {
 		$('#menuButton').show();
@@ -86,21 +59,7 @@ function refreshSize() {
 		$('#bag').css('float', 'none');
 	}
 	
-	if(screenWidth < smallScreenMax){
-		collumns = 1;
-		fontSize = 1.5;
-	}else if(screenWidth < mediumScreenMax){
-		collumns = 2;
-		fontSize = 1.5;
-	}else{
-		collumns = 4;
-		fontSize = 1;
-	}
-	
-	projectWrapper.css('-webkit-column-count', collumns);
-	projectWrapper.css('-moz-column-count', collumns);
-	projectWrapper.css('column-count', collumns);
-	projectWrapper.css('font-size', fontSize +'em');
+	resizeProjects(screenWidth);
 	
 	var footer = $('footer');
 	var main = $('main');
@@ -109,13 +68,6 @@ function refreshSize() {
 	var height = Math.max(possibleHeight1, possibleHeight2);
 	footer.moveTo(0, height);
 	
-	var body = $('body').perfectScrollbar();
-	
-	if(($('.projectBuble').length - numberOfplaceHolders) % collumns == 0){
-		$('.placeHolderBuble').css('visibility','collapse');
-	}else{
-		$('.placeHolderBuble').css('visibility','hidden');
-	}
 	if(isOverflowing(footer)){
 		footer.css('display', 'none');
 	}
