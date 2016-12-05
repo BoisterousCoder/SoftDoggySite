@@ -80,3 +80,10 @@ function fectchRepoData(projectElement, callback) {
 		});
 	}
 }
+
+function onPlayClick(){
+	
+}
+function onSourceClick(){
+	
+}
