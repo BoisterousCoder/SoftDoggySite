@@ -13,12 +13,16 @@ initProjects = function () {
 
 		var playButton = $('<button></button>');
 		playButton.addClass('playButton');
+		playButton.addClass('link');
 		playButton.html('Play');
+		playButton.attr('goto', projectElement.attr('playLink'));
 
 		var sourceButton = $('<button></button>');
 		sourceButton.addClass('sourceButton');
-		sourceButton.html('Source')
-
+		sourceButton.addClass('link');
+		sourceButton.html('Source');
+		sourceButton.attr('goto', projectElement.attr('srcLink'));
+		
 		var buttonWrapper = $('<div></div>');
 		buttonWrapper.addClass('buttonWrapper');
 		buttonWrapper.append(playButton);
@@ -36,8 +40,12 @@ initProjects = function () {
 		fectchRepoData(projectElement, function () {
 			var desc = projectElement.children('p');
 			desc.html(projectElement.attr('desc'));
+			playButton.attr('goto', projectElement.attr('playLink'));
+			sourceButton.attr('goto', projectElement.attr('srcLink'));
 		});
 	});
+	
+	$('.link').click(onClickLink);
 }
 
 resizeProjects = function (screenWidth) {
@@ -81,9 +89,8 @@ function fectchRepoData(projectElement, callback) {
 	}
 }
 
-function onPlayClick(){
-	
-}
-function onSourceClick(){
-	
+function onClickLink(e){
+	var clickedButton = $(this);
+	var url = clickedButton.attr('goto');
+	window.open(url);
 }

@@ -15,9 +15,9 @@ $(function () {
 		}
 	});
 	$('.menuItem').click(function(){
-        var pathParts = window.location.pathname.split('/');
-        pathParts[pathParts.length-1] = $(this).attr('goto');
-        window.location.pathname = pathParts.join('/');
+		var pathParts = window.location.pathname.split('/');
+		pathParts[pathParts.length-1] = $(this).attr('goto');
+		window.location.pathname = pathParts.join('/');
 	});
 	initProjects();
 	var body = $('body').perfectScrollbar();
