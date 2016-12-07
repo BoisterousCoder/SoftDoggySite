@@ -1,0 +1,23 @@
+{
+    "all": [{
+        "name": "Test Map 1",
+        "description": "This is the origional map",
+        "src": "JSON/Maps/testMap.json"
+    }, {
+        "name": "Test Map 2",
+        "description": "This is a slight variation of the origional map",
+        "src": "JSON/Maps/testMap2.json"
+    }, {
+        "name": "Test Map 3",
+        "description": "A copy of Test Map 2",
+        "src": "JSON/Maps/testMap3.json"
+    }, {
+        "name": "Test Map 4",
+        "description": "A copy of Test Map 2",
+        "src": "JSON/Maps/testMap4.json"
+    }, {
+        "name": "Test Map 5",
+        "description": "A copy of Test Map 2",
+        "src": "JSON/Maps/testMap5.json"
+    }]
+}

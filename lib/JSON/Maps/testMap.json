@@ -1,0 +1,87 @@
+{
+    "size": {"x":1002, "y":1002},
+    "floorColor":{"r":0,"b":0,"g":127},
+	"spawnPoints": [{"x":150, "z":0}, {"x":-150, "z":0}],
+    "teams": [
+        {
+            "spawn":{"x":150, "z":0},
+            "color":{"r":0,"b":0,"g":0},
+            "carts":[
+                {"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 0, "squad": 0, "cartNum":0},
+                {"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 1, "squad": 1, "cartNum":1},
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 1, "squad": 1, "cartNum":2},
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 1, "squad": 2, "cartNum":1},
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 2, "squad": 1, "cartNum":1},
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 2, "squad": 1, "cartNum":2},
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 2, "squad": 2, "cartNum":1}
+                ]
+        },
+        {
+           "spawn":{"x":-150, "z":0},
+           "color":{"r":255,"b":255,"g":255},
+			"carts":[
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 0, "squad": 0, "cartNum":0},
+                {"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 1, "squad": 1, "cartNum":1},
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 1, "squad": 1, "cartNum":2},
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 1, "squad": 2, "cartNum":1},
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 2, "squad": 1, "cartNum":1},
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 2, "squad": 1, "cartNum":2},
+				{"armor":0, "health":100, "shield":50, "attack":10, "speed":1, "lives":2, "platoon": 2, "squad": 2, "cartNum":1}
+				]
+        }
+	],
+	"walls":[
+		{
+			"pos":{"x":-30, "z":250},
+			"size":{"x":1, "y":3, "z":500},
+            "color":{"r":127,"b":0,"g":0}
+		},
+		{
+			"pos":{"x":30, "z":-250},
+			"size":{"x":1, "y":3, "z":500},
+            "color":{"r":127,"b":0,"g":0}
+		},
+        {
+			"pos":{"x":-100, "z":-250},
+			"size":{"x":1, "y":15, "z":500},
+            "color":{"r":127,"b":0,"g":0}
+		},
+		{
+			"pos":{"x":100, "z":250},
+			"size":{"x":1, "y":15, "z":500},
+            "color":{"r":127,"b":0,"g":0}
+		},
+		{
+			"pos":{"x":0, "z":0},
+			"size":{"x":1, "y":500, "z":1},
+            "color":{"r":0,"b":127,"g":0}
+		},
+		{
+			"pos":{"x":500, "z":0},
+			"size":{"x":1, "y":70, "z":1000},
+            "color":{"r":0,"b":127,"g":0}
+		},
+		{
+			"pos":{"x":-500, "z":0},
+			"size":{"x":1, "y":70, "z":1000},
+            "color":{"r":0,"b":127,"g":0}
+		},
+		{
+			"pos":{"x":0, "z":500},
+			"size":{"x":1000, "y":70, "z":1},
+            "color":{"r":0,"b":127,"g":0}
+		},
+		{
+			"pos":{"x":0, "z":-500},
+			"size":{"x":1000, "y":70, "z":1},
+            "color":{"r":0,"b":127,"g":0}
+		}
+	],
+	"lights":[
+		{"x":0, "y":40, "z":0, "light":0.5},
+		{"x":150, "y":40, "z":0, "light":0.5},
+		{"x":-150, "y":40, "z":0, "light":0.5},
+		{"x":0, "y":40, "z":150, "light":0.5},
+		{"x":0, "y":40, "z":-150, "light":0.5}
+	]
+}

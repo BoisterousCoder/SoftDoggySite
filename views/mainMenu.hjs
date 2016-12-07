@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SoftDoggy Games</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript">
+        function switchSite(url) {
+            window.location.href += url;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>SoftDoggy Games</h1>
+    <div>
+        <p>Cart Master</p>
+		<button>Instructions</button><br/>
+        <button onClick='switchSite("cartMaster")'>Play Without Client</button><br/>
+		<button>Download Client</button><br/>
+		<button>Download Server</button><br/>
+    </div>
+    <div>
+        <p>C# test</p>
+		<button>Instructions</button><br/>
+        <button onClick='switchSite("Ctest")'>Play Without Client</button><br/>
+		<button>Download Client</button><br/>
+		<button>Download Server</button><br/>
+    </div>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html id='html'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cart Master</title>
+	<script src="JS/APIS/socketIO.js"></script>
+    <script src="JS/APIS/babylon.js"></script>
+    <script src="JS/APIS/hand.js"></script>
+    <script src="JS/APIS/cannon.js"></script>
+    <script src="JS/APIS/jquery.js"></script>
+	<script src="JS/APIS/UI.js"></script>
+	<script src="JS/Utils.js"></script>
+	<link rel='stylesheet' href='stylesheets/game.css'></link>
+</head>
+
+<body>
+    <canvas id="renderCanvas"></canvas>
+    <canvas id="menuCanvas"></canvas>
+    <p id='controlText'></p>
+    <p id='selectedUnits'></p>
+	<p id='lifeText'></p>
+    <script src='JS/game/selectableCarts.js'></script>
+    <script src='JS/game/keylistener.js'></script>
+    <script src='JS/game/AIs.js'></script>
+    <script src='JS/game/createOBJ.js'></script>
+    <script src="JS/game/pointerLocker.js"></script>
+	<script src="JS/game/eventLoop.js"></script>
+    <script src='JS/game/start.js'></script>
+    <script src='JS/game/UI.js'></script>
+	<script src="JS/game/Socket.js"></script>
+    <img id='crossHair' src="Imgs/Cross%20Hair.png"/>
+    <img id='loader' src='Imgs/loading%20gif.gif'/>
+	<img id='background' src='Imgs/Grey.png'/>
+    <div id='gameOver'>
+        <img id='black' src="Imgs/black.png"/>
+        <p id='gameOverText'>
+            <h1>You Lose</h1>
+        </p>
+    </div>
+    <div id='healthBar'>
+        <img src='Imgs/red.png'/>
+    </div>
+    <div id='shieldBar'>
+        <img src="Imgs/blue.png"/>
+    </div>
+    <div id='energyBar'>
+        <img src='Imgs/yellow.png'/>
+    </div>
+    <button id='muteButton'>mute</button>
+    <script src='JS/Menu/start.js'></script>
+	<script src='JS/Menu/mapSelector.js'></script>
+</body>
+
+</html>

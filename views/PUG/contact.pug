@@ -1,0 +1,18 @@
+extends ./index.pug
+
+mixin css(src)
+	-src = 'CSS/' + src
+	link(href=src, rel="stylesheet", type="text/css")
+mixin script(src)
+	-src = 'JS/' + src
+	script(type="text/javascript", src=src)
+
+block title
+	| Contact
+
+block head
+	+css('Contact.css')
+	+script('Contact.js')
+
+block content
+	| nothing yet

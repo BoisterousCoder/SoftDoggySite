@@ -1,0 +1,45 @@
+doctype html
+html#html
+	head
+		meta(charset='utf-8')
+		title Cart Master
+		script(src='JS/APIS/socketIO.js')
+		script(src='JS/APIS/babylon.js')
+		script(src='JS/APIS/hand.js')
+		script(src='JS/APIS/cannon.js')
+		script(src='JS/APIS/jquery.js')
+		script(src='JS/APIS/UI.js')
+		script(src='JS/Utils.js')
+		link(rel='stylesheet', href='CSS/CartMaster.css')
+	body
+		canvas#renderCanvas
+		canvas#menuCanvas
+		p#controlText
+		p#selectedUnits
+		p#lifeText
+		script(src='JS/game/selectableCarts.js')
+		script(src='JS/game/keylistener.js')
+		script(src='JS/game/AIs.js')
+		script(src='JS/game/createOBJ.js')
+		script(src='JS/game/pointerLocker.js')
+		script(src='JS/game/eventLoop.js')
+		script(src='JS/game/start.js')
+		script(src='JS/game/UI.js')
+		script(src='JS/game/Socket.js')
+		img#crossHair(src='Imgs/Cross%20Hair.png')
+		img#loader(src='Imgs/loading%20gif.gif')
+		img#background(src='Imgs/Grey.png')
+		#gameOver
+			img#black(src='Imgs/black.png')
+			p#gameOverText
+			h1 You Lose
+			p
+		#healthBar
+			img(src='Imgs/red.png')
+		#shieldBar
+			img(src='Imgs/blue.png')
+		#energyBar
+			img(src='Imgs/yellow.png')
+		button#muteButton mute
+		script(src='JS/Menu/start.js')
+		script(src='JS/Menu/mapSelector.js')
