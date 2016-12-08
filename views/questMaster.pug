@@ -1,0 +1,21 @@
+doctype html
+html
+	head
+		title Quest Master
+		script.
+			var isPublicGame = '#{ isHosting }';
+			var isPrivateHosting = '#{ isPublicGame }';
+		script(type='text/javascript', src='/JS/QuestMaster/socketIO.js')
+		script(type='text/javascript', src='/JS/QuestMaster/QuestMaster.js')
+		script(type='text/javascript', src='/JS/QuestMaster/JQuery.js')
+		link(rel='stylesheet', href='/CSS/QuestMaster.css')
+	body#body
+		canvas#mainCanvas Your browser does not support html 5
+		#chatBox
+			p#name
+				| Name:
+				input#nameInput(type='text', autocomplete='off')
+			ul#messages
+			form(action='')
+				input#m(autocomplete='off')
+				button  Send

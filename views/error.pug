@@ -1,3 +1,20 @@
-h1 #{message}
-h2 #{error.status}
-pre #{error.stack}
+extends ./index.pug
+
+mixin css(src)
+	-src = 'CSS/' + src
+	link(href=src, rel="stylesheet", type="text/css")
+mixin script(src)
+	-src = 'JS/' + src
+	script(type="text/javascript", src=src)
+
+block title
+	| #{message}
+	
+block head
+	+css('Home.css')
+	+script('Home.js')
+	
+block content
+	div
+		h3 #{error.status}
+		| #{error.stack}

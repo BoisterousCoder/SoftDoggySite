@@ -16,6 +16,43 @@ module.exports = function(io) {
         socket.on('joinRequest', function(res) {
             io.emit('joinRequest', res);
         });
+        
+        socket.on('hostRequest', function(res) {
+            io.emit('hostRequest', res);
+        });
+        
+        socket.on('ready', function(res) {
+            io.emit('ready', res);
+        });
+        
+        socket.on('teamPieces', function(res) {
+            io.emit('teamPieces', res);
+        });
+        
+        socket.on('turn', function(res) {
+            io.emit('turn', res);
+        });
+        
+        socket.on('chat message', function(msg) {
+            io.emit('chat message', msg);
+        });
+        
+		socket.on('movement', function(msg) {
+            io.emit('movement', msg);
+        });
+        
+		socket.on('rotation', function(msg) {
+            io.emit('rotation', msg);
+        });
+        
+		socket.on('bullet', function(msg) {
+            io.emit('bullet', msg);
+        });
+        
+        socket.on('joinRequest', function(res) {
+            io.emit('joinRequest', res);
+        });
+        
         socket.on('hostRequest', function(res) {
             io.emit('hostRequest', res);
         });
@@ -23,23 +60,9 @@ module.exports = function(io) {
         socket.on('ready', function(res) {
             io.emit('ready', res);
         });
-        socket.on('teamPieces', function(res) {
-            io.emit('teamPieces', res);
-        });
+        
         socket.on('turn', function(res) {
             io.emit('turn', res);
-        });
-        socket.on('chat message', function(msg) {
-            io.emit('chat message', msg);
-        });
-		socket.on('movement', function(msg) {
-            io.emit('movement', msg);
-        });
-		socket.on('rotation', function(msg) {
-            io.emit('rotation', msg);
-        });
-		socket.on('bullet', function(msg) {
-            io.emit('bullet', msg);
         });
     });
 };

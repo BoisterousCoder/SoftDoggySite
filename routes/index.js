@@ -26,6 +26,13 @@ router.get('/cartMaster', function(req, res) {
     });
 });
 
+router.get('/questMaster', function(req, res) {
+    //render the main menu
+    res.render('questMaster', {
+        title: 'Quest Master'
+    });
+});
+
 /*
 app.get('/download', function(req, res){
 
