@@ -26,6 +26,17 @@ router.get('/cartMaster', function(req, res) {
     });
 });
 
+/*
+app.get('/download', function(req, res){
+
+  var file = fs.readFileSync(__dirname + '/upload-folder/dramaticpenguin.MOV', 'binary');
+
+  res.setHeader('Content-Length', file.length);
+  res.write(file, 'binary');
+  res.end();
+});
+*/
+
 router.get('/game2', function(req, res) {
     //render the game
     res.render('babylon');
