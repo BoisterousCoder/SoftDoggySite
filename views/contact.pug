@@ -14,5 +14,10 @@ block head
 	+css('Contact.css')
 	+script('Contact.js')
 
-block content
-	| nothing yet
+block Content
+    form
+    	label Email: 
+		input(type='email' name='Email' placeholder='john.smith@example.com')
+		br
+		label Your Message:
+		textArea(name='message')
