@@ -1,7 +1,4 @@
 extends ./index.pug
-// This Source Code Form is subject to the terms of the Mozilla Public
-	License, v. 2.0. If a copy of the MPL was not distributed with this
-	file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 mixin css(src)
 	-src = 'CSS/' + src
@@ -17,10 +14,15 @@ block head
 	+css('Contact.css')
 	+script('Contact.js')
 
-block Content
-    form
-    	label Email: 
+block content
+	form.textBlock
+		h3 Send a Message to Me
+		br
+		label Email: 
 		input(type='email' name='Email' placeholder='john.smith@example.com')
 		br
 		label Your Message:
+		br
 		textArea(name='message')
+		br
+		input(type='submit' value='Submit')
