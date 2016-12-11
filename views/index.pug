@@ -26,19 +26,22 @@ html
 		#menuButtonDiv
 			#horizMenuList.menuList
 				ul
-					li#logo.menuItem(goto='') Home
-					li.menuItem(goto='about') About
-					li.menuItem(goto='projects') Projects
-					li.menuItem(goto='contact') Contact
+					li#logo.menuItem.link(goto='./') Home
+					li.menuItem.link(goto='./about') About
+					li.menuItem.link(goto='./projects') Projects
+					li.menuItem.link(goto='./contact') Contact
+					li.menuItem.link(goto='./donations') Donations
 			button#menuButton
 				div
 					span#topBar.menuButton
 					span#bottomnBar.menuButton
 			#vertMenuList.menuList
 				ul
-					li.menuItem(goto='about') About
-					li.menuItem(goto='projects') Projects
-					li.menuItem(goto='contact') Contact
+					li.menuItem.link(goto='./about') About
+					li.menuItem.link(goto='./projects') Projects
+					li.menuItem.link(goto='./contact') Contact
+					li.menuItem.link(goto='./donations') Donations
+					li.menuItem.link(goto='./license') License
 		header.noselect
 			h1 SoftDoggy
 			h3
@@ -59,10 +62,11 @@ html
 					h3 Donations
 					| If you would like to donate money to help me make my games better, I have a donations tab. The money donated would go to either helping me go to collage or to making the games themselves better. With that money I could buy things like the rights to better sounds and music to make my games more engaging, or to hire someone to draw images that aren't just my horrible art skills.
 		footer.noselect
-			| SoftDoggy&copy;2016 Made by Christopher Jackson.
+			span.link(goto='license') Christopher Jackson&copy;2016
 			br
 			ul
-				li.menuItem(goto='') Home
-				li.menuItem(goto='about') About
-				li.menuItem(goto='projects') Projects
-				li.menuItem(goto='contact') Contact
+				li.menuItem.link(goto='./') Home
+				li.menuItem.link(goto='./about') About
+				li.menuItem.link(goto='./projects') Projects
+				li.menuItem.link(goto='./contact') Contact
+				li.menuItem.link(goto='./donations') Donations

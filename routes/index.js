@@ -20,6 +20,12 @@ router.get('/projects', function(req, res) {
 router.get('/contact', function(req, res) {
     res.render('contact');
 });
+router.get('/donations', function(req, res) {
+    res.render('donations');
+});
+router.get('/license', function(req, res) {
+    res.render('license');
+});
 
 router.get('/cartMaster', function(req, res) {
     //render the game
