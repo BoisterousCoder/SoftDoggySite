@@ -54,7 +54,7 @@ footer ul{
     margin: 0.5em 0 0 2em;
 }
 
-.noselect {
+.noselect, .link {
     cursor: default;
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
@@ -71,19 +71,4 @@ footer ul{
     padding: 1em;
     border: #9d4ce4 5px solid;
     border-radius: 15px;
-}
-
-/* For Google Chrome */
-::-webkit-scrollbar-thumb {
-    background: $foreground-color;
-}
-
-::-webkit-scrollbar-track {
-    background: $background-color;
-}
-
-/* IE */
-body {
-    scrollbar-face-color: $foreground-color;
-    scrollbar-track-color: $background-color;
 }

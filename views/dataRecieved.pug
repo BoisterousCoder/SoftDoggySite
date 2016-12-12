@@ -1,0 +1,28 @@
+extends ./index.pug
+
+mixin css(src)
+	-src = 'CSS/' + src
+	link(href=src, rel="stylesheet", type="text/css")
+mixin script(src)
+	-src = 'JS/' + src
+	script(type="text/javascript", src=src)
+
+block title
+	| Your Message has been sent. 
+	
+block head
+	+css('Home.css')
+	+script('Home.js')
+	
+block content
+	.textBlock
+		h3 Thank you for your message.
+		| You sent the message :
+		br
+		| #{message}
+		br
+		br
+		| I may respond some time in the near future to the email #{email}.
+		br
+		br
+		span.link(goto='/') Go Back

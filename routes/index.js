@@ -26,6 +26,13 @@ router.get('/donations', function(req, res) {
 router.get('/license', function(req, res) {
     res.render('license');
 });
+router.post('/reciveData', function(req, res){
+	//https://www.npmjs.com/package/express-mailer
+	res.render('dataRecieved', {
+		email:req.body.email,
+		message:req.body.message
+	});
+});
 
 router.get('/cartMaster', function(req, res) {
     //render the game
