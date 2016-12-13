@@ -19,10 +19,11 @@ block content
 		h3 Send a Message to Me
 		br
 		label Email: 
-		input(type='email' name='email' placeholder='john.smith@example.com')
+		input(type='email' name='email' placeholder='john.smith@example.com' required)
 		br
 		label Your Message:
 		br
-		textArea(name='message')
+		textArea(name='message' required)
 		br
+		input.noShow(type='address', name='address' placeholder='please dont fill this in')
 		input(type='submit' value='Submit')

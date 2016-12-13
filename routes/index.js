@@ -3,6 +3,22 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 var express = require('express');
 var router = express.Router();
+var mailer = require('nodemailer').createTransport('smtps://shadowace248%40gmail.com:03nY3B4ts!!two@smtp.gmail.com');
+var mailOptions = {
+    from: '"The SoftDoggy Contact Form 👥" <noreply@softdoggy.mod.bz>', 
+    to: 'shadowace248@gmail.com',
+    subject: 'SoftDoggy Contact Form Message' 
+};
+
+function sendMail(text){
+	mailOptions.text = text;
+	mailer.sendMail(mailOptions, function(error, info){
+    	if(error){
+        	return console.log(error);
+    	}
+    	console.log('Message sent: ' + info.response);
+	});
+}
 
 router.get('/', function(req, res) {
     //render the main menu
@@ -28,10 +44,18 @@ router.get('/license', function(req, res) {
 });
 router.post('/reciveData', function(req, res){
 	//https://www.npmjs.com/package/express-mailer
-	res.render('dataRecieved', {
-		email:req.body.email,
-		message:req.body.message
-	});
+	if(!req.body.email || !req.body.message){
+		res.send('Please go back and fill in both the email and message portion of the form.')
+	}else if(!req.body.address){
+		res.render('dataRecieved', {
+			email:req.body.email,
+			message:req.body.message
+		});
+		var message = req.body.message + '\n\n\t~' + req.body.email;
+		sendMail(message);
+	}else{
+		res.send('YOU ARE A MONSTER, or you just didn\'t know what you were doing.')
+	}
 });
 
 router.get('/cartMaster', function(req, res) {

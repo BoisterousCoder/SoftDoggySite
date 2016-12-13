@@ -64,7 +64,9 @@ footer ul{
             user-select: none; /* Non-prefixed version, currently
                                   not supported by any browser */
 }
-
+.noShow{
+	display: none;
+}
 .textBlock{
     background-color: #333;
     color: #fff;
