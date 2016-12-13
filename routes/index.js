@@ -3,7 +3,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 var express = require('express');
 var router = express.Router();
-var mailer = require('nodemailer').createTransport('smtps://shadowace248%40gmail.com:03nY3B4ts!!two@smtp.gmail.com');
+var sendmailTransport = require('nodemailer-sendmail-transport');
+var nodemailer = require('nodemailer');
+var mailer = nodemailer.createTransport(sendmailTransport({}));
 var mailOptions = {
     from: '"The SoftDoggy Contact Form 👥" <noreply@softdoggy.mod.bz>', 
     to: 'shadowace248@gmail.com',
