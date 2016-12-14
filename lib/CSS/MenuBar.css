@@ -11,7 +11,7 @@
 	padding-bottom: 0%;
 	list-style: none;
 	height: auto;
-	top: 0px;
+	top: 0;
 }
 .menuList{
 	webkit-user-select: none;
@@ -21,7 +21,7 @@
 }
 
 #horizMenuList{
-	height: 48px;
+	height: 0.5in;
 	margin: auto;
 	width: 100%;
 	display: inline-block;
@@ -42,10 +42,10 @@
 
 .menuList li {
 	color: #fff;
-	font-size: 18px;
-	font-size: 20px;
+	font-size: 0.18in;
+	font-size: 0.25in;
 	margin: 0;
-	margin-top: 11px;
+	margin-top: 0.1in;
 	cursor: pointer;
 }
 .menuList li:hover {
@@ -53,7 +53,7 @@
 }
 
 #horizMenuList li{
-	padding: 0 10px;
+	padding: 0 0.1in;
 	display: inline-block;
 }
 
@@ -70,8 +70,8 @@
 }
 
 #menuButton, #menuButton div  {
-	width: 48px;
-	height: 48px;
+	width: 0.5in;
+	height: 0.5in;
 	display: block;
 	z-index: 3;
 	margin: 0;
@@ -86,20 +86,20 @@
 }
 
 .menuButton{
-	height: 1px;
-	width: 17px;
+	height: 0.01in;
+	width: 0.2in;
 	position: absolute;
 	background-color: #fff;
-	left: 16px;
+	left: 0.16in;
 	transition: 0.2s;
 }
 
 #topBar{
-	top: 20px;
+	top: 0.2in;
 }
 
 #bottomnBar{
-	top: 25px; 
+	top: 0.25in; 
 }
 
 body {
@@ -113,7 +113,7 @@ body {
 	height: 100%;
 	position: absolute;
 	z-index: 2;
-	font-size: 20px;
+	font-size: 0.2in;
 	line-height: 2.35;
 	font-weight: 300;
 	letter-spacing: normal;
@@ -122,7 +122,7 @@ body {
 }
 #vertMenuList {
 	background: #333;
-	height: calc(100% - 48px);
+	height: calc(100% - 0.5in);
 	margin: 0;
 	position: absolute;
 	width: 100%;
@@ -134,5 +134,5 @@ body {
 #menuButtonDiv {
 	background: #333;
 	padding: 0;
-	height: 48px;
+	height: 0.5in;
 }
