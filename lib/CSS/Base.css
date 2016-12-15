@@ -13,14 +13,16 @@ header{
     background-color: #333;
     border: #9d4ce4 7px solid;
     color: #fff;
-    max-width: 968px;
+    max-width: 10.68in;
     border-radius: 15px;
     margin:auto;
+    font-size: 0.2in;
 }
 main{
     padding: 0 1em;
-    max-width: 968px;
+    max-width: 10.68in;
     margin:auto;
+    font-size: 0.2in;
 }
 h1, h2, h3, h4, h5, h6{
     margin: 0;
