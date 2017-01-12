@@ -17,6 +17,7 @@ header{
     border-radius: 15px;
     margin:auto;
     font-size: 0.2in;
+    padding-right: 1em;
 }
 main{
     padding: 0 1em;
@@ -26,6 +27,13 @@ main{
 }
 h1, h2, h3, h4, h5, h6{
     margin: 0;
+}
+a{
+    color: lightblue;
+    text-decoration: none;
+}
+a:hover{
+    color: darkblue;
 }
 footer{
     padding-left: 1em;

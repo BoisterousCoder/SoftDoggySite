@@ -7,8 +7,12 @@ mixin script(src)
 	-src = 'JS/' + src
 	script(type="text/javascript", src=src)
 
+block pageName
+	|About
+
 block title
-	| About
+	h1 About
+	h3 This is a webpage showing off some my skills.
 
 block head
 	+css('About.css')
@@ -94,4 +98,6 @@ block content
 		br
 		| 5.3 Understand the Relationship Between the Web and Social Media:
 		br
-		| I think that what is said on Social Media dramatically effects your customers, because social media can almost always reach a much larger audience than any other method. This means a single vocal person can make you gain or lose a lot of customers.
+		| I think that what is said on Social Media dramatically effects your customers, because social media can almost always reach a much larger audience than any other method. This means a single vocal person can make you gain or lose a lot of customers. 
+		a(href='https://www.youtube.com/channel/UCRWa5qX5vw23r_R2j1yixbA') Here is a link to my youtube channel.
+		|  However, I usually only use it for watching rather than making videos.

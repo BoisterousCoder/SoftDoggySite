@@ -7,8 +7,12 @@ mixin script(src)
 	-src = 'JS/' + src
 	script(type="text/javascript", src=src)
 
+block pageName
+	|Donations
+
 block title
-	| Donations
+	h1 Donations
+	h3 This page is a work in progress. It does not currently work.
 
 block head
 	+css('About.css')

@@ -11,8 +11,9 @@ html
 			script(type="text/javascript", src=src)
 		title
 			|SoftDoggy 
-			block title
+			block pageName
 				| Home
+		link(rel="shortcut icon" type="image/png" href="/icon.png")
 		+css('perfect-scrollbar.min.css')
 		+css('MenuBar.css')
 		+css('Base.css')
@@ -43,10 +44,9 @@ html
 					li.menuItem.link(goto='./donations') Donations
 					li.menuItem.link(goto='./license') License
 		header.noselect
-			h1 SoftDoggy
-			h3
-				block title
-					| Home
+			block title
+				h1 Home
+				h3 This is the main page.
 		main
 			#dpi(style="height: 1in; width: 1in; left: 100%; position: fixed; top: 100%;")
 			block content

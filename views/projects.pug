@@ -7,8 +7,12 @@ mixin script(src)
 	-src = 'JS/' + src
 	script(type="text/javascript", src=src)
 
+block pageName
+	|Projects
+
 block title
-	| Projects
+	h1 Projects
+	h3 All of my projects are a work in progress; in various states of incompletion. Many do not have a play button function yet.
 
 block head
 	+css('Projects.css')
