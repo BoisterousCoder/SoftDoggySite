@@ -5,6 +5,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var mime = require('mime');
+var fs = require('fs');
 var sendmailTransport = require('nodemailer-sendmail-transport');
 var nodemailer = require('nodemailer');
 var mailer = nodemailer.createTransport(sendmailTransport({}));
@@ -23,18 +24,32 @@ function sendMail(text) {
 		console.log('Message sent: ' + info.response);
 	});
 }
+function openPDF(filename, res){
+	var stream = fs.createReadStream(__dirname + '/../downloads/' + filename);
+	var filename = filename; 
+	
+	filename = encodeURIComponent(filename);
+	
+	res.setHeader('Content-disposition', 'inline; filename="' + filename + '"');
+  	res.setHeader('Content-type', 'application/pdf');
+	
+	stream.pipe(res);
+}
 
 router.get('/download/resume', function (req, res) {
-	var file = __dirname + '/../downloads/Resume.pdf';
-	res.download(file)
+	//var file = __dirname + '/../downloads/Resume.pdf';
+	//res.download(file)
+	openPDF('Resume.pdf', res)
 });
 router.get('/download/transcript', function (req, res) {
-	var file = __dirname + '/../downloads/Transcript.pdf';
-	res.download(file)
+	//var file = __dirname + '/../downloads/Transcript.pdf';
+	//res.download(file)
+	openPDF('Transcript.pdf', res)
 });
 router.get('/download/OSHA', function (req, res) {
-	var file = __dirname + '/../downloads/OSHA.pdf';
-	res.download(file)
+	//var file = __dirname + '/../downloads/OSHA.pdf';
+	//res.download(file)
+	openPDF('OSHA.pdf', res)
 });
 router.get('/', function (req, res) {
 	//render the main menu
