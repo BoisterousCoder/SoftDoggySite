@@ -9,7 +9,7 @@ var sendmailTransport = require('nodemailer-sendmail-transport');
 var nodemailer = require('nodemailer');
 var mailer = nodemailer.createTransport(sendmailTransport({}));
 var mailOptions = {
-	from: '"The SoftDoggy Contact Form 👥" <noreply@softdoggy.mod.bz>',
+	from: 'noreply@softdoggy.mod.bz',
 	to: 'shadowace248@gmail.com',
 	subject: 'SoftDoggy Contact Form Message'
 };
@@ -46,6 +46,9 @@ router.get('/about', function (req, res) {
 });
 router.get('/projects', function (req, res) {
 	res.render('projects');
+});
+router.get('/standards', function (req, res) {
+	res.render('standards');
 });
 router.get('/contact', function (req, res) {
 	res.render('contact');
