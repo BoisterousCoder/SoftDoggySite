@@ -41,10 +41,10 @@ router.get('/download/resume', function (req, res) {
 	//res.download(file)
 	openPDF('Resume.pdf', res)
 });
-router.get('/download/ceriport', function (req, res) {
+router.get('/download/certiport', function (req, res) {
 	//var file = __dirname + '/../downloads/Resume.pdf';
 	//res.download(file)
-	openPDF('Ceriport.pdf', res)
+	openPDF('Certiport.pdf', res)
 });
 router.get('/download/transcript', function (req, res) {
 	//var file = __dirname + '/../downloads/Transcript.pdf';
