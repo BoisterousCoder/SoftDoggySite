@@ -8,7 +8,8 @@ mixin script(src)
 	script(type="text/javascript", src=src)
 
 block title
-	| #{message}
+	h1 Error
+	h3 #{message}
 	
 block head
 	+css('About.css')
