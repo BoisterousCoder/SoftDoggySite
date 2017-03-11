@@ -6,24 +6,8 @@ var router = express.Router();
 var path = require('path');
 var mime = require('mime');
 var fs = require('fs');
-var sendmailTransport = require('nodemailer-sendmail-transport');
-var nodemailer = require('nodemailer');
-var mailer = nodemailer.createTransport(sendmailTransport({}));
-var mailOptions = {
-	from: 'noreply@softdoggy.mod.bz',
-	to: 'shadowace248@gmail.com',
-	subject: 'SoftDoggy Contact Form Message'
-};
+var emailler = require('./emailler');
 
-function sendMail(text) {
-	mailOptions.text = text;
-	mailer.sendMail(mailOptions, function (error, info) {
-		if (error) {
-			return console.log(error);
-		}
-		console.log('Message sent: ' + info.response);
-	});
-}
 function openPDF(filename, res){
 	var stream = fs.createReadStream(__dirname + '/../downloads/' + filename);
 	var filename = filename; 
@@ -31,7 +15,7 @@ function openPDF(filename, res){
 	filename = encodeURIComponent(filename);
 	
 	res.setHeader('Content-disposition', 'inline; filename="' + filename + '"');
-  	res.setHeader('Content-type', 'application/pdf');
+	res.setHeader('Content-type', 'application/pdf');
 	
 	stream.pipe(res);
 }
@@ -84,12 +68,12 @@ router.post('/reciveData', function (req, res) {
 	if (!req.body.email || !req.body.message) {
 		res.send('Please go back and fill in both the email and message portion of the form.')
 	} else if (!req.body.address) {
+		var webAddress = req.get('host') + req.originalUrl;
+		emailler(webAddress).sendEmailForm(req.body.email, req.body.message);;
 		res.render('dataRecieved', {
 			email: req.body.email,
 			message: req.body.message
 		});
-		var message = req.body.message + '\n\n\t~' + req.body.email;
-		sendMail(message);
 	} else {
 		res.send('YOU ARE A MONSTER, or you just didn\'t know what you were doing.')
 	}
@@ -109,17 +93,6 @@ router.get('/questMaster', function (req, res) {
 		title: 'Quest Master'
 	});
 });
-
-/*
-app.get('/download', function(req, res){
-
-  var file = fs.readFileSync(__dirname + '/upload-folder/dramaticpenguin.MOV', 'binary');
-
-  res.setHeader('Content-Length', file.length);
-  res.write(file, 'binary');
-  res.end();
-});
-*/
 
 router.get('/game2', function (req, res) {
 	//render the game
