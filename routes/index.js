@@ -30,10 +30,20 @@ router.get('/download/certiport', function (req, res) {
 	//res.download(file)
 	openPDF('Certiport.pdf', res)
 });
-router.get('/download/transcript', function (req, res) {
+router.get('/download/certiport', function (req, res) {
+	//var file = __dirname + '/../downloads/Resume.pdf';
+	//res.download(file)
+	openPDF('Certiport.pdf', res)
+});
+router.get('/download/strengthsReport', function (req, res) {
+	//var file = __dirname + '/../downloads/Resume.pdf';
+	//res.download(file)
+	openPDF('GallupReport.pdf', res)
+});
+router.get('/download/strengthsFinder', function (req, res) {
 	//var file = __dirname + '/../downloads/Transcript.pdf';
 	//res.download(file)
-	openPDF('Transcript.pdf', res)
+	openPDF('streangthsFinder.pdf', res)
 });
 router.get('/download/OSHA', function (req, res) {
 	//var file = __dirname + '/../downloads/OSHA.pdf';
