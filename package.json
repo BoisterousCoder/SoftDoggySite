@@ -1,42 +1,44 @@
 {
-  "name": "softdoggy",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.12.0",
-    "cookie-parser": "~1.3.4",
-    "debug": "~2.1.1",
-    "express": "~4.12.2",
-    "hjs": "~0.0.6",
-    "less-middleware": "1.0.x",
-    "morgan": "~1.5.1",
-    "nodemailer": "^2.7.0",
-    "nodemailer-sendmail-transport": "^1.0.0",
-    "serve-favicon": "~2.2.0",
-    "socket.io": "^1.3.5"
-  },
-  "description": "My portfolio website.",
-  "main": "bin/www.js",
-  "bin": {
-    "softdoggy": "www.js"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shadowace112/SoftDoggySite.git"
-  },
-  "keywords": [
-    "SoftDoggy",
-    "Website",
-    "Portfolio"
-  ],
-  "author": "Christopher Jackson",
-  "license": "MPL-2.0",
-  "bugs": {
-    "url": "https://github.com/shadowace112/SoftDoggySite/issues"
-  },
-  "homepage": "https://softdoggy-94253.onmodulus.net"
+	"name": "softdoggy",
+	"version": "0.2.0",
+	"private": true,
+	"scripts": {
+		"start": "node ./bin/www"
+	},
+	"dependencies": {
+		"body-parser": "~1.12.0",
+		"cookie-parser": "~1.3.4",
+		"debug": "~2.1.1",
+		"express": "~4.12.2",
+		"hjs": "~0.0.6",
+		"less-middleware": "1.0.x",
+		"morgan": "~1.5.1",
+		"mailcomposer": "4.0.0",
+		"mailgun-js": "0.10.1",
+		"pug": "2.0.0-beta6",
+		"send": "0.12.1",
+		"serve-favicon": "~2.2.0",
+		"socket.io": "^1.3.5"
+	},
+	"description": "My portfolio website.",
+	"main": "bin/www.js",
+	"bin": {
+		"softdoggy": "www.js"
+	},
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/shadowace112/SoftDoggySite.git"
+	},
+	"keywords": [
+		"SoftDoggy",
+		"Website",
+		"Portfolio"
+	],
+	"author": "Christopher Jackson",
+	"license": "MPL-2.0",
+	"bugs": {
+		"url": "https://github.com/shadowace112/SoftDoggySite/issues"
+	},
+	"homepage": "https://softdoggy-94253.onmodulus.net"
 }

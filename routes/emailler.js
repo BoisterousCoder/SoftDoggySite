@@ -1,28 +1,23 @@
 'use strict'
-module.exports = function (_webAddress) {
-	const nodemailer = require('nodemailer');
-	const webAddress = _webAddress;
-	let transporter = nodemailer.createTransport({
-		sendmail: true,
-		newline: 'unix',
-		path: '/usr/sbin/sendmail'
-	});
+module.exports = function (to) {
+	const APIKEY = process.env.apikey;
+	const RECIVER = process.env.reciver;
+	const DOMAIN = proccess.env.mailSenderDomain
+	const MAILGUN = require('mailgun-js')({apiKey: APIKEY, domain: DOMAIN});
 	return {
 		send(from, to, msg, subject) {
-			transporter.sendMail({
-				from: from + '@' + webAddress,
-				to: to,
-				subject: subject,
-				text: msg
-			}, (err, info) => {
-				console.log(err);
-				console.log(info);
-				//console.log(info.envelope);
-				//console.log(info.messageId);
-			});
+			//nope
 		},
 		sendEmailForm(from, msg) {
-			this.send('noreply', 'shadowac248@gmail.com', msg + '\n\n\t~' + from, 'Email Form');
+			const DATA = {
+				from: 'Mailgun Sandbox <postmaster@sandboxf97b6449364041c689e32c7a3367fd7f.mailgun.org>',
+				to: 'Chris <' + RECIVER + '>',
+				subject: 'Form Msg',
+				text: msg + '\n\n\t~' + from
+			};
+			mailgun.messages().send(data, function (error, body) {
+				console.log(body);
+			});
 		}
 	};
 };
