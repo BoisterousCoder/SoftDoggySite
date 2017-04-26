@@ -21,33 +21,24 @@ function openPDF(filename, res){
 }
 
 router.get('/download/resume', function (req, res) {
-	//var file = __dirname + '/../downloads/Resume.pdf';
-	//res.download(file)
 	openPDF('Resume.pdf', res)
 });
 router.get('/download/certiport', function (req, res) {
-	//var file = __dirname + '/../downloads/Resume.pdf';
-	//res.download(file)
 	openPDF('Certiport.pdf', res)
 });
 router.get('/download/certiport', function (req, res) {
-	//var file = __dirname + '/../downloads/Resume.pdf';
-	//res.download(file)
 	openPDF('Certiport.pdf', res)
 });
 router.get('/download/strengthsReport', function (req, res) {
-	//var file = __dirname + '/../downloads/Resume.pdf';
-	//res.download(file)
 	openPDF('GallupReport.pdf', res)
 });
 router.get('/download/strengthsFinder', function (req, res) {
-	//var file = __dirname + '/../downloads/Transcript.pdf';
-	//res.download(file)
 	openPDF('streangthsFinder.pdf', res)
 });
+router.get('/download/SkillsEval', function (req, res) {
+	openPDF('SkillsEval.pdf', res)
+});
 router.get('/download/OSHA', function (req, res) {
-	//var file = __dirname + '/../downloads/OSHA.pdf';
-	//res.download(file)
 	openPDF('OSHA.pdf', res)
 });
 router.get('/', function (req, res) {
